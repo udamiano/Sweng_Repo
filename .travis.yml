@@ -1,4 +1,5 @@
 language: android
+sudo: enabled
 android:
   components:
     # The BuildTools version used by your project
@@ -18,8 +19,8 @@ before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
-script:
   - chmod +x ./gradlew
+script:
   - ./gradlew build connectedCheck jacocoTestReport
 after_script:
   # Report test coverage to Code Climate
