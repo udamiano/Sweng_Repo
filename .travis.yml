@@ -1,5 +1,4 @@
 language: android
-sudo: enabled
 android:
   components:
     # The BuildTools version used by your project
@@ -20,7 +19,9 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
   - chmod +x ./gradlew
+	
 script:
+  - chmod +x ./gradlew build connectedCheck
   - ./gradlew build connectedCheck jacocoTestReport
 after_script:
   # Report test coverage to Code Climate
