@@ -17,7 +17,7 @@
         android:ems="10"
         android:hint="@string/hint_name"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text=""
         app:layout_constraintBottom_toTopOf="@+id/mainGoButton"
         app:layout_constraintEnd_toEndOf="@+id/mainGoButton"
         app:layout_constraintHorizontal_bias="0.453"
